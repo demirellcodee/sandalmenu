@@ -1,0 +1,522 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  background: url(Hamburger-cuate\ \(1\).png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+    
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* koyu filtre */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 90%;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 20px 30px;
+  background-color: #00704A; /* Starbucks yeşili */
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+ 
+}
+
+.btn:hover {
+  background-color: #004f35;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+.menu-section {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.menu-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  height: 200px;
+}
+
+.menu-item:hover {
+  transform: scale(1.03);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-item h3 {
+  margin: 15px 0 5px;
+  font-size: 1.4rem;
+}
+
+.menu-item p {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+.menu-item span {
+  display: inline-block;
+  margin: 10px 0 20px;
+  font-weight: bold;
+  color: #00704A;
+  font-size: 1.1rem;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Navbar Temeli */
+.navbar {
+  position: fixed; /* Sayfada sabit kalsın */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00704A; /* Starbucks yeşili */
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: default;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #c1e1c1;
+}
+
+/* Hamburger Menü (mobilde gözükecek) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Mobil Görünüm */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Menü gizli olacak */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #00704A;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@keyframes pulseBorder {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 112, 74, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 112, 74, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 112, 74, 0);
+  }
+}
+
+.search-bar:focus {
+  animation: pulseBorder 1s ease;
+}
+------------
+/* Menü kısmı */
+
+.menu-section {
+  padding: 30px;
+}
+
+/* Kategori listesi, dikey liste, scroll animasyonlu */
+.category-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  max-height: 250px;          /* Burada dikey scroll için yükseklik */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.category-list ul li {
+  border-bottom: 1px solid #eee;
+}
+
+.category-list ul li:last-child {
+  border-bottom: none;
+}
+
+.category-list ul li a {
+  display: block;
+  padding: 12px 20px;
+  color: #00704A;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.category-list ul li a:hover,
+.category-list ul li a:focus {
+  background-color: #e1f0e8;
+  outline: none;
+}
+
+/* Kategoriler arası yumuşak scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Kategori içerik bölümü */
+.category-section {
+  margin-bottom: 80px;
+}
+
+/* Menü kartları için örnek stil */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.menu-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.menu-info p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.price {
+  background-color: #00704A;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  display: inline-block;
+}
+-----------------
+.menu-section {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+  
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.menu-section h2 {
+  font-size: 36px;
+  color: #2e2e2e;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.menu-card {
+ position: relative;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.menu-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.menu-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.menu-card span {
+  font-weight: bold;
+  color: #00754a; /* Starbucks yeşili */
+  font-size: 16px;
+}
+.instagram-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#00754a;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.instagram-button:hover {
+    background-color: #0b3123ef;
+    transform: scale(1.1);
+}
+
+.instagram-button span {
+    margin-left: 10px;
+}
+.footer {
+    background-color: #f6eded;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000202;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 16px;
+    color: #0d1b52;
+}
+
+.footer-code {
+    font-size: 30px;
+    color: #13300c;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+.footer-code:hover {
+    transform: rotate(0deg);
+    color: #23462c;
+}
+.menu-item h3 {
+  margin-bottom: 30px; /* Bu değeri isteğine göre değiştirebilirsin */
+}
+.hakkımızda-card{
+   height: 100vh;
+  background: url(sandal\ kafeee.jpg);
+  background-position:center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 252, 252);
+  text-align: center;
+  position: relative;
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.menu-item {
+  background-image: url("boat.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  padding: 40px 20px;
+  color: white;
+  height: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.menu-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* yarı saydam siyah */
+  z-index: 0;
+  border-radius: 16px;
+}
+
+.menu-item h3,
+.menu-item a {
+  z-index: 1;
+  position: relative;
+}
+.nav-links {
+  display: none;
+  /* diğer stiller */
+}
+
+.nav-links.active {
+  display: block;
+  /* menü açıldığında görünür */
+}
+/* Geniş ekran (masaüstü) için */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+  }
+}
