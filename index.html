@@ -2,6 +2,328 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Sandal Kafe'nin yemek, tatli, sicak ve soguk icecek menusu ile sahil esintili modern kafe deneyimi."
+  />
+  <title>Sandal Kafe | Modern Lezzet Durağı</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Ana navigasyon">
+      <a class="logo" href="#hero" aria-label="Sandal Kafe ana sayfa">
+        <span class="logo-mark">S</span>
+        <span>Sandal Kafe</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#hero">Anasayfa</a></li>
+        <li><a href="#menu">Menü</a></li>
+        <li><a href="#hakkimizda">Hakkımızda</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero section-shell">
+      <div class="hero-content">
+        <span class="eyebrow">Sahil esintili kafe deneyimi</span>
+        <h1>Lezzeti, huzuru ve modern atmosferi aynı masada buluşturuyoruz.</h1>
+        <p>
+          Sandal Kafe; taze yemekleri, özenle hazırlanan içecekleri ve samimi
+          sahil ruhuyla günün her anına keyifli bir mola ekler.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#menu">Menüyü İncele</a>
+          <a class="btn btn-secondary" href="#contact">Bize Ulaş</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Sandal Kafe öne çıkan bilgiler">
+        <div>
+          <span class="hero-card-label">Bugünün önerisi</span>
+          <strong>Balık Ekmek + Limonata</strong>
+        </div>
+        <div class="hero-card-price">₺240</div>
+      </aside>
+    </section>
+
+    <section class="stats section-shell" aria-label="Kafe özellikleri">
+      <div class="stat-card">
+        <strong>Günlük</strong>
+        <span>Taze hazırlık</span>
+      </div>
+      <div class="stat-card">
+        <strong>5+</strong>
+        <span>Menü kategorisi</span>
+      </div>
+      <div class="stat-card">
+        <strong>Sahil</strong>
+        <span>Rahat atmosfer</span>
+      </div>
+    </section>
+
+    <section id="menu" class="menu-overview section-shell">
+      <div class="section-heading">
+        <span class="eyebrow">Menümüz</span>
+        <h2>Favori lezzetini hızlıca seç.</h2>
+        <p>Yemeklerden içeceklere, Sandal Kafe menüsünde her mola için sıcak bir seçenek var.</p>
+      </div>
+
+      <div class="category-grid">
+        <a class="category-card" href="#yemekler">
+          <span>01</span>
+          <h3>Yemekler</h3>
+          <p>Izgara lezzetler, balık ekmek, tost ve doyurucu menüler.</p>
+        </a>
+        <a class="category-card" href="#tatlilar">
+          <span>02</span>
+          <h3>Tatlılar</h3>
+          <p>Günün tatlılarıyla kahvenin yanına yumuşak bir kapanış.</p>
+        </a>
+        <a class="category-card" href="#sicak-icecekler">
+          <span>03</span>
+          <h3>Sıcak İçecekler</h3>
+          <p>Kahve, çay ve salep seçenekleriyle günün ritmini yakala.</p>
+        </a>
+        <a class="category-card" href="#soguk-icecekler">
+          <span>04</span>
+          <h3>Soğuk İçecekler</h3>
+          <p>Ferahlık arayanlar için gazlı içecekler, ayran ve limonata.</p>
+        </a>
+        <a class="category-card" href="#corbalar">
+          <span>05</span>
+          <h3>Günün Çorbası</h3>
+          <p>Her gün değişen sıcak ve ev yapımı çorba seçenekleri.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="yemekler" class="menu-section section-shell">
+      <div class="section-heading">
+        <span class="eyebrow">Doyurucu seçimler</span>
+        <h2>Yemekler</h2>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-card">
+          <div>
+            <h3>Balık Ekmek</h3>
+            <p>Taptaze balık, limon ve yeşillikle buluşan klasik sokak lezzeti.</p>
+          </div>
+          <span>₺180</span>
+        </article>
+        <article class="menu-card featured">
+          <div>
+            <h3>Balık Tava Salata</h3>
+            <p>Domates, biber, sarımsak ve tereyağı aromasıyla hazırlanan özel tabak.</p>
+          </div>
+          <span>₺600</span>
+        </article>
+        <article class="menu-card">
+          <div>
+            <h3>Köfte Ekmek</h3>
+            <p>Izgarada pişmiş köfte, yumuşak ekmek ve ev yapımı lezzet.</p>
+          </div>
+          <span>₺200</span>
+        </article>
+        <article class="menu-card">
+          <div>
+            <h3>Köfte Tabağı</h3>
+            <p>Cips, domates, marul, soğan, közlenmiş biber ve kızarmış ekmek.</p>
+          </div>
+          <span>₺280</span>
+        </article>
+        <article class="menu-card">
+          <div>
+            <h3>Hamburger</h3>
+            <p>%100 dana eti, çıtır marul ve ev yapımı sosla doyurucu bir klasik.</p>
+          </div>
+          <span>₺180</span>
+        </article>
+        <article class="menu-card">
+          <div>
+            <h3>Tavuk Ekmek</h3>
+            <p>Soslu ızgara tavuk, taze ekmek ve bol lezzet bir arada.</p>
+          </div>
+          <span>₺200</span>
+        </article>
+        <article class="menu-card">
+          <div>
+            <h3>Sucuk Ekmek</h3>
+            <p>Baharatlı sucuk ve köz tadında ekmekle nefis uyum.</p>
+          </div>
+          <span>₺190</span>
+        </article>
+        <article class="menu-card">
+          <div>
+            <h3>Tost</h3>
+            <p>Dışı çıtır, içi yumuşacık; her lokmada sade mutluluk.</p>
+          </div>
+          <span>₺160</span>
+        </article>
+        <article class="menu-card">
+          <div>
+            <h3>Patates Cips</h3>
+            <p>Altın sarısı, çıtır çıtır ve her zaman favori atıştırmalık.</p>
+          </div>
+          <span>₺100</span>
+        </article>
+        <article class="menu-card featured">
+          <div>
+            <h3>Hamburger Menü</h3>
+            <p>Hamburger, patates cips ve Coca-Cola ile tam menü.</p>
+          </div>
+          <span>₺300</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="tatlilar" class="menu-section section-shell">
+      <div class="section-heading">
+        <span class="eyebrow">Tatlı mola</span>
+        <h2>Tatlılar</h2>
+      </div>
+      <div class="menu-grid compact">
+        <article class="menu-card">
+          <div>
+            <h3>Günün Tatlısı</h3>
+            <p>Ağlayan gelin, haşhaşlı revani, etimek tatlısı, meyveli pasta veya mozaik.</p>
+          </div>
+          <span>₺130</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="sicak-icecekler" class="menu-section section-shell">
+      <div class="section-heading">
+        <span class="eyebrow">Sıcak fincanlar</span>
+        <h2>Sıcak İçecekler</h2>
+      </div>
+      <div class="menu-grid compact">
+        <article class="menu-card"><h3>Türk Kahvesi</h3><span>₺90</span></article>
+        <article class="menu-card"><h3>Dibek Kahvesi</h3><span>₺90</span></article>
+        <article class="menu-card"><h3>Nescafe</h3><span>₺60</span></article>
+        <article class="menu-card"><h3>Çay</h3><span>₺30</span></article>
+        <article class="menu-card"><h3>Salep</h3><span>₺90</span></article>
+      </div>
+    </section>
+
+    <section id="soguk-icecekler" class="menu-section section-shell">
+      <div class="section-heading">
+        <span class="eyebrow">Ferah seçenekler</span>
+        <h2>Soğuk İçecekler</h2>
+      </div>
+      <div class="menu-grid compact">
+        <article class="menu-card"><h3>Coca-Cola</h3><span>₺70</span></article>
+        <article class="menu-card"><h3>Fanta</h3><span>₺70</span></article>
+        <article class="menu-card"><h3>Fuse Tea</h3><span>₺70</span></article>
+        <article class="menu-card">
+          <div>
+            <h3>Ayran</h3>
+            <p>Küçük ayran ₺30.</p>
+          </div>
+          <span>₺50</span>
+        </article>
+        <article class="menu-card"><h3>Su</h3><span>₺25</span></article>
+        <article class="menu-card"><h3>Fresha</h3><span>₺50</span></article>
+        <article class="menu-card"><h3>Limonata</h3><span>₺60</span></article>
+        <article class="menu-card"><h3>Şalgam</h3><span>₺50</span></article>
+        <article class="menu-card"><h3>Gazoz</h3><span>₺50</span></article>
+      </div>
+    </section>
+
+    <section id="corbalar" class="menu-section section-shell">
+      <div class="section-heading">
+        <span class="eyebrow">Günün sıcağı</span>
+        <h2>Çorbalar</h2>
+      </div>
+      <div class="menu-grid compact">
+        <article class="menu-card">
+          <div>
+            <h3>Günün Çorbası</h3>
+            <p>Mercimek, ezogelin, ev tarhanası veya pancar çorbası.</p>
+          </div>
+          <span>₺100</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="hakkimizda" class="about section-shell">
+      <div class="about-panel">
+        <span class="eyebrow">Hakkımızda</span>
+        <h2>Sandal Kafe'de herkesin kendine ait bir köşesi var.</h2>
+        <p>
+          Sahil esintisinin huzurunu lezzetli tatlarla birleştiren sıcak bir buluşma
+          noktasıyız. Kahvenizi yudumlarken, yemeğinizi paylaşırken veya kısa bir
+          mola verirken kendinizi iyi hissetmeniz için her tabağa özen katıyoruz.
+        </p>
+      </div>
+      <div class="about-highlight">
+        <span>Her yudumda emek</span>
+        <strong>Her tabakta özen</strong>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section-shell">
+      <div>
+        <span class="eyebrow">İletişim</span>
+        <h2>Günün lezzetlerini takip edin.</h2>
+        <p>Yeni menüler, günlük tatlılar ve duyurular için Instagram hesabımızı ziyaret edin.</p>
+      </div>
+      <a
+        class="instagram-button"
+        href="https://www.instagram.com/sandallkafe?igsh=MWJ5cDRxMmExMjQycA=="
+        target="_blank"
+        rel="noreferrer"
+      >
+        Instagram'da Gör
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="footer-logo">Sandal Kafe</span>
+    <span>Modern tasarım & kodlama: demirelcode</span>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("active");
+      navToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>demirelcode</title>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
